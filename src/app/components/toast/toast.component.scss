@@ -1,0 +1,68 @@
+.toast {
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    height: 100px;
+    z-index: 3;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 100px;
+    position: absolute;
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+@keyframes left_appear{
+    from {left: -100%;}
+    to {left: 0%;}
+}
+@keyframes top_appear{
+    from {top: -100%;}
+    to {top: 0%;}
+}
+@keyframes right_appear{
+    from {right: -100%;}
+    to {right:0;}
+}
+@keyframes bottom_appear{
+    from {bottom: -100%;}
+    to {bottom: 0;}
+}
+@keyframes center_appear{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes left_close{
+    from {left: 0%;}
+    to {left: -100%;}
+}
+@keyframes right_close{
+    from {right: 0%;}
+    to {right: -100%;}
+}
+@keyframes top_close{
+    from {top: 0%;}
+    to {top: -100%;}
+}
+@keyframes bottom_close{
+    from {bottom: 0%;}
+    to {bottom: -100%;}
+}
+@keyframes center_close{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.success {
+    background-color: green;
+}
+.failed {
+    background-color: red ;
+}
+.close {
+    height: 20px;
+    width: 20px;
+    border: none;
+}

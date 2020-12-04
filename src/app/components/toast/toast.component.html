@@ -1,0 +1,7 @@
+<div [class]="toast.type === '0' ? 'toast success' : 'toast failed'" [ngStyle]="style">
+    <button class ="close" *ngIf="toast.close" (click)="deleteToast()">x</button>
+    <p>{{toast.type}}</p>
+    <p *ngIf="toast.showtitle">{{toast.title}}</p>
+    <p>{{toast.content}}</p>
+    <p *ngIf="toast.time">{{toast.duration}}</p>
+</div>

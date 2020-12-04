@@ -1,0 +1,54 @@
+<div>
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm)">
+        <div>
+            <p>Title</p>
+            <input formControlName="title" type="text" placeholder="Title"/>
+        </div>
+        <div>
+            <p>Content</p>
+            <input formControlName="content" type="text" placeholder="Content"/>
+        </div>
+        <div>
+            <p>Type</p>
+            <select formControlName="type">
+                <option value="0">IsSucces</option>
+                <option value="1">IsFailed</option>
+              </select>
+        </div>
+        <div>
+            <p>HasCloseButton</p>
+            <input formControlName="close" type="checkbox">
+        </div>
+        <div>
+            <p>DurationShow</p>
+            <input formControlName="time" type="checkbox">
+        </div>
+        <div>
+            <p>TitleShow</p>
+            <input formControlName="showtitle" type="checkbox">
+        </div>
+        <div>
+            <p>Horizontal Position</p>
+            <select formControlName="horizontal">
+                <option value="LEFT">LEFT</option>
+                <option value="CENTER">CENTER</option>
+                <option value="RIGHT">RIGHT</option>
+              </select>
+        </div>
+        <div>
+            <p>Vertical Position</p>
+            <select formControlName="vertical">
+                <option value="TOP">TOP</option>
+                <option value="CENTER">CENTER</option>
+                <option value="BOTTOM">BOTTOM</option>
+
+              </select>
+        </div>
+        <div>
+            <p>Duration</p>
+            <p>Min value 0  Max value 100</p>
+            <input formControlName="duration" type="range" min="0" max="100"/>
+        </div>
+    <button type="submit" [disabled]="createForm.invalid">Create Toast</button>
+    </form>
+</div>
